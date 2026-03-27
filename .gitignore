@@ -1,1 +1,11 @@
+# Archivos compilados de Maven - no deben subirse a GitHub
+target/
+
+# Archivos de configuración de IDEs
+.settings/
+.classpath
+.project
 *.class
+
+# Logs
+*.log
