@@ -3,7 +3,6 @@ package com.gestionleads.servlet;
 import com.gestionleads.dao.SeguimientoDAO;
 import com.gestionleads.modelo.Seguimiento;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
