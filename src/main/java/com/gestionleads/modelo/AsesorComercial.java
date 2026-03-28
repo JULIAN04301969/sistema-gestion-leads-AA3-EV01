@@ -18,8 +18,9 @@ public class AsesorComercial {
     private int idAsesor;
 
     // Disponibilidad actual del asesor (1=disponible, 0=no disponible)
-    @Column(name = "disponibilidad", nullable = false)
-    private boolean disponibilidad;
+    // Mapeado como TINYINT para coincidir con el tipo real en MySQL
+    @Column(name = "disponibilidad", nullable = false, columnDefinition = "TINYINT")
+    private int disponibilidad;
 
     // Usuario asociado al asesor comercial
     @ManyToOne
@@ -31,8 +32,8 @@ public class AsesorComercial {
     public int getIdAsesor() { return idAsesor; }
     public void setIdAsesor(int idAsesor) { this.idAsesor = idAsesor; }
 
-    public boolean isDisponibilidad() { return disponibilidad; }
-    public void setDisponibilidad(boolean disponibilidad) { this.disponibilidad = disponibilidad; }
+    public int getDisponibilidad() { return disponibilidad; }
+    public void setDisponibilidad(int disponibilidad) { this.disponibilidad = disponibilidad; }
 
     public Usuario getUsuario() { return usuario; }
     public void setUsuario(Usuario usuario) { this.usuario = usuario; }

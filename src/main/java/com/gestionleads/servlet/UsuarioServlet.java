@@ -16,7 +16,6 @@ import java.util.List;
  * @author JULIAN OCAMPO
  * @version 1.0
  */
-@WebServlet("/usuarios")
 public class UsuarioServlet extends HttpServlet {
 
     // DAO para acceso a datos de la entidad Usuario

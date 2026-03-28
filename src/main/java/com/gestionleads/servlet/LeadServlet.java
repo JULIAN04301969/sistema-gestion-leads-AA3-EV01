@@ -16,7 +16,6 @@ import java.util.List;
  * @author JULIAN OCAMPO
  * @version 1.0
  */
-@WebServlet("/leads")
 public class LeadServlet extends HttpServlet {
 
     // DAO para acceso a datos de la entidad Lead
