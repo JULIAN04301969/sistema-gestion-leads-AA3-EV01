@@ -10,7 +10,7 @@ import java.time.LocalDate;
  * @version 1.0
  */
 @Entity
-@Table(name = "lead")
+@Table(name = "`lead`")
 public class Lead {
 
     @Id
@@ -43,23 +43,23 @@ public class Lead {
     private String feedbackCliente;
 
     // Relación con fuente de origen del lead
-    @ManyToOne
-    @JoinColumn(name = "id_fuente", nullable = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+@JoinColumn(name = "id_fuente", nullable = false)
     private Fuente fuente;
 
     // Relación con prioridad asignada
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_prioridad", nullable = false)
     private Prioridad prioridad;
 
     // Asesor comercial asignado al lead
-    @ManyToOne
-    @JoinColumn(name = "id_asesor_asignado")
+   @ManyToOne(fetch = FetchType.EAGER)
+@JoinColumn(name = "id_asesor_asignado")
     private AsesorComercial asesorAsignado;
 
     // Usuario que creó el registro
-    @ManyToOne
-    @JoinColumn(name = "id_usuario_creador", nullable = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+@JoinColumn(name = "id_usuario_creador", nullable = false)
     private Usuario usuarioCreador;
 
     // Constructor vacío requerido por Hibernate
